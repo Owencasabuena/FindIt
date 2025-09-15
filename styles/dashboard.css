@@ -94,7 +94,7 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   list-style: none;
   justify-content: space-between;
   align-items: center;
@@ -137,6 +137,11 @@ section h1 {
     padding: 10px 15px;
     border-radius: 10px;
     background-color: var(--amber);
+    transition: background-color 0.5s ease;
+}
+
+.search-button:hover {
+    background-color: rgb(211, 163, 6);
 }
 
 .filter {
@@ -151,72 +156,150 @@ section h1 {
     background-color: rgb(228, 228, 228);
     border-radius: 20px;
     padding: 5px 10px;
+    transition: background-color 0.5s ease;
+}
+
+.filter-btn:hover {
+    background-color: rgb(177, 177, 177);
 }
 
 .filter-btn.active {
     background-color: var(--amber);
 }
 
+.filter-btn.active:hover {
+    background-color: rgb(211, 163, 6);
+}
+
 .card-container {
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 .card {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 15px;
+    align-items: center;
     gap: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    border-left: 5px solid var(--indigo-dye);
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    margin-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Status section */
-.card-status h3 {
-    margin: 0;
-    padding: 5px 10px;
-    background-color: var(--indigo-dye);
-    color: #fff;
-    border-radius: 6px;
-    font-size: 1rem;
+.card.lost {
+    border-left: 5px solid #e53935;
 }
 
-/* Details section */
+.card.found {
+    border-left: 5px solid #43a047;
+}
+
+.card.claim {
+    border-left: 5px solid #6c757d;
+}
+
+.card-status {
+    color: white;
+    width: 80px;
+}
+
+.card-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.lost .card-status h3 {
+    background-color: #e53935;
+    padding: 5px;
+    border-radius: 9px;
+}
+
+.card.found .card-status h3 {
+    background-color: #43a047;
+    padding: 5px;
+    border-radius: 9px;
+}
+
+.card.claim .card-status h3 {
+    background-color: #6c757d;
+    padding: 5px;
+    border-radius: 9px;
+}
+
 .card-details {
-    flex: 1; /* takes available space */
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 2px;
+    flex: 1;
 }
 
 .card-details h2 {
-    margin: 0;
     font-size: 1.2rem;
     color: #333;
+    text-align: justify;
 }
 
 .card-details p {
-    margin: 0;
     color: #555;
     font-size: 0.9rem;
 }
 
-/* Button section */
-.card-btn button {
-    background-color: var(--amber);
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #000;
-    font-weight: 600;
-    transition: background 0.3s;
+.card-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.card-btn button:hover {
-    background-color: #ffca28; /* lighter amber */
+.card-btn .btn-found {
+    all: unset;                  
+    padding: 5px 0px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: .9rem; 
+    transition: background-color 0.3s ease;
+    background-color: #43a047; 
+}
+
+.card-btn .btn-claim {
+    all: unset;                  
+    padding: 5px 0px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white; 
+    font-size: .9rem;
+    transition: background-color 0.3s ease;
+    background-color: #1e88e5; 
+}
+
+.card-btn .btn-unmark {
+    all: unset;                  
+    padding: 5px 0px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white; 
+    font-size: .9rem;
+    transition: background-color 0.3s ease;
+    background-color: #6c757d; 
+}
+
+.btn-found:hover {
+    background-color: #388e3c;
+}
+
+.btn-claim:hover {
+    background-color: #1565c0;
+}
+
+.btn-unmark:hover {
+    background-color: #5a6268;
 }
