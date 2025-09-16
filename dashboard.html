@@ -23,8 +23,8 @@
         <nav>
             <ul>
                 <li><a href="#">My Items</a></li>
-                <li><a href="#">Report Lost Item</a></li>
-                <li><a href="#">Report Found Item</a></li>
+                <li><button class="modal-btn-report-lost">Report Lost Item</button></li>
+                <li><button class="modal-btn-report-found">Report Found Item</button></li>
                 <li><a href="#">Logout</a></li>
             </ul>
         </nav>
@@ -59,6 +59,7 @@
                     <p>Location: Library</p>
                     <p>Date Lost: 2025-09-05</p>
                     <p>Date Posted: 2025-09-06</p>
+                    <p>Contact: Full name (email)</p>
                 </div>
                 <div class="card-btn">
                     <button class="btn-found">Mark as Found</button>
@@ -77,6 +78,7 @@
                     <p>Location: Cafeteria</p>
                     <p>Date Found: 2025-09-10</p>
                     <p>Date Posted: 2025-09-10</p>
+                    <p>Contact: Full name (email)</p>
                 </div>
                 <div class="card-btn">
                     <button class="btn-claim">Mark as Claimed</button>
@@ -95,6 +97,7 @@
                     <p>Location: Computer Lab</p>
                     <p>Date Found: 2025-09-08</p>
                     <p>Date Claimed: 2025-09-09</p>
+                    <p>Contact: Full name (email)</p>
                 </div>
                 <div class="card-btn">
                     <button class="btn-unmark">Unmark as Claimed</button>
@@ -112,6 +115,7 @@
                     <p>Location: Math Department</p>
                     <p>Date Lost: 2025-09-04</p>
                     <p>Date Posted: 2025-09-05</p>
+                    <p>Contact: Full name (email)</p>
                 </div>
                 <div class="card-btn">
                     <button class="btn-found">Mark as Found</button>
@@ -130,6 +134,7 @@
                     <p>Location: Gymnasium</p>
                     <p>Date Found: 2025-09-11</p>
                     <p>Date Posted: 2025-09-11</p>
+                    <p>Contact: Full name (email)</p>
                 </div>
                 <div class="card-btn">
                     <button class="btn-claim">Mark as Claimed</button>
@@ -148,6 +153,7 @@
                     <p>Location: Parking Area</p>
                     <p>Date Found: 2025-09-02</p>
                     <p>Date Claimed: 2025-09-03</p>
+                    <p>Contact: Full name (email)</p>
                 </div>
                 <div class="card-btn">
                     <button class="btn-unmark">Unmark as Claimed</button>
@@ -155,6 +161,36 @@
             </div>
         </section>
     </main>
+
+    <dialog class="modal modal-lost">
+        <h2>Report Lost Item</h2>
+        <button class="close-modal-lost">
+            <i class="fas fa-times"></i>
+        </button>
+        <form method="dialog">
+            <input type="text" placeholder="Item Name" required>
+            <textarea placeholder="Description"></textarea>
+            <input type="text" placeholder="Location" required>
+            <input type="date" required>
+            <input type="text" placeholder="Contact Info" required>
+            <button type="submit">Submit</button>
+        </form>
+    </dialog>
+
+    <dialog class="modal modal-found">
+        <h2>Report Found Item</h2>
+        <button class="close-modal-found">
+            <i class="fas fa-times"></i>
+        </button>
+        <form method="dialog">
+            <input type="text" placeholder="Item Name" required>
+            <textarea placeholder="Description"></textarea>
+            <input type="text" placeholder="Location" required>
+            <input type="date" required>
+            <input type="text" placeholder="Contact Info" required>
+            <button type="submit">Submit</button>
+        </form>
+    </dialog>
 
     <script src="js/dashboard.js"></script>
 </body>

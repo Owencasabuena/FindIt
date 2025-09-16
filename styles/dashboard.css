@@ -112,6 +112,14 @@ nav ul li:last-child a{
   color: white;
 }
 
+.modal-btn-report-lost {
+
+}
+
+.modal-btn-report-found {
+    
+}
+
 /* Main */
 .search {
     padding: 20px;
