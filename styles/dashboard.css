@@ -311,3 +311,14 @@ section h1 {
 .btn-unmark:hover {
     background-color: #5a6268;
 }
+
+input, 
+button,
+select,
+textarea {
+    font: inherit;
+}
+
+.form-group {
+    display: grid;
+}
